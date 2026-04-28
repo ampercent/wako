@@ -1,0 +1,207 @@
+# BANNER FILE NOT PROVIDED (-b option)
+# BULK_EXTRACTOR-Version: 2.0.2
+# Feature-Recorder: rfc822
+# Filename: Evidence\case1.dmp
+# Feature-File-Version: 1.1
+39045225	host:9229	ress (e.g. localhost:9229)"},"entrypoints
+39507091	host:9229	\274\210例如，localhost:9229）"},"entrypoin
+50451352	subject: "Subject",	ransparency",\012  subject: "Subject",\012  validFrom: "V
+50607648	host: this	this.#shadow, { host: this });\012  }\012}\012funct
+50643213	host: this	this.#shadow, { host: this });\012  }\012  valid
+51152039	host: this	this.#shadow, { host: this });\012    });\012   
+51188467	host: this	this.#shadow, { host: this });\012      retur
+51189089	host: this	this.#shadow, { host: this });\012    if (thi
+41539732	host:e.parentNode	ShadowRoot(e)?e.host:e.parentNode;function getNod
+41541691	host:e	of ShadowRoot?e.host:e);let n=window._
+41594790	Host:void	:void 0,preserveHost:void 0}).numPathPart
+41600391	host:t.hostname	l.split(":")[0],host:t.hostname,securityOrigin:
+51629900	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+52146236	Host:void	:void 0,preserveHost:void 0}).numPathPart
+52345020	Host: undefined	,\012      preserveHost: undefined};\012    const num
+42179808	host:n	===n.nodeType?n.host:n)&&!dn(n,t)&&n!=
+52671667	host:this	.renderOptions={host:this},this._$Do=void
+53500695	host: proxy.hostname	                host: proxy.hostname,\012              
+53811146	host: this	shadow, {\012      host: this\012    });\012  }\012}\012C
+53819699	host: this	this.#shadow, { host: this });\012  }\012  get v
+53828655	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+53860621	host: this	adow, {\012        host: this\012      });\012    }
+53868737	host: this	shadow, {\012      host: this\012    });\012    thi
+53888252	host: this	ows), parent, { host: this });\012  }\012}\012expor
+53892359	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+53899667	host: this	this.#shadow, { host: this });\012    });\012  }
+53902409	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+53913380	host: this	this.#shadow, { host: this });\012    this.#t
+53917827	host: this	this.#shadow, { host: this });\012    });\012  }
+53921730	host: this	this.#shadow, { host: this });\012  }\012  #crea
+53930229	host: this	shadow, {\012      host: this\012    });\012  }\012  #
+43192563	host:t	onPing(e){const{host:t,pathname:n}=toU
+43192746	host:t	GptTag(e){const{host:t,pathname:n}=toU
+43192979	host:t	AMPTag(e){const{host:t,pathname:n}=toU
+43195040	host:a	rn n.name;const{host:a}=new URL(e),[r=
+53962211	host: this	this.#shadow, { host: this });\012  }\012  #crea
+53966915	host: this	this.#shadow, { host: this });\012  }\012  #onEn
+53972505	host: this	this.#shadow, { host: this });\012  }\012  #onKe
+53980104	host: this	this.#shadow, { host: this });\012  }\012  #show
+53993356	host: this	this.#shadow, { host: this });\012  }\012  #plot
+54008820	host: this	this.#shadow, { host: this });\012    });\012  }
+54011812	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+54013227	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+54016563	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+54023164	host: this	shadow, {\012      host: this\012    });\012  }\012}\012C
+54026266	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+54029134	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+54031960	host: this	shadow, {\012      host: this\012    });\012  }\012  #
+54036130	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+54045993	host: this	this.#shadow, { host: this });\012  }\012}\012expor
+54046418	host: this	this.#shadow, { host: this });\012  }\012}\012expor
+54046869	host: this	this.#shadow, { host: this });\012  }\012}\012expor
+54047294	host: this	this.#shadow, { host: this });\012  }\012}\012expor
+54047687	host: this	this.#shadow, { host: this });\012  }\012}\012expor
+54048088	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+54058880	host: this	this.#shadow, { host: this });\012    });\012  }
+54061991	host: this	this.#shadow, { host: this });\012  }\012  #chec
+54063447	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+54068038	host: this	this.#shadow, { host: this });\012    });\012  }
+54072991	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+54134188	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+54149142	host: this	adow, {\012        host: this\012      });\012    }
+54160505	host: this	this.#shadow, { host: this });\012  }\012  #rend
+43564160	Cookie::Secure"] = 20] = "CookieIssue::WarnCrossDowngrade::ReadCookie::Secure";	sDowngrade::ReadCookie::Secure"] = 20] = "CookieIssue::WarnCrossDowngrade::ReadCookie::Secure";\012  IssueCreated2
+43564308	Cookie::Insecure"] = 21] = "CookieIssue::WarnCrossDowngrade::ReadCookie::Insecure";	sDowngrade::ReadCookie::Insecure"] = 21] = "CookieIssue::WarnCrossDowngrade::ReadCookie::Insecure";\012  IssueCreated2
+43564459	Cookie::Secure"] = 22] = "CookieIssue::WarnCrossDowngrade::SetCookie::Secure";	ssDowngrade::SetCookie::Secure"] = 22] = "CookieIssue::WarnCrossDowngrade::SetCookie::Secure";\012  IssueCreated2
+43564605	Cookie::Insecure"] = 23] = "CookieIssue::WarnCrossDowngrade::SetCookie::Insecure";	ssDowngrade::SetCookie::Insecure"] = 23] = "CookieIssue::WarnCrossDowngrade::SetCookie::Insecure";\012  IssueCreated2
+43565073	Cookie::Secure"] = 26] = "CookieIssue::ExcludeContextDowngrade::ReadCookie::Secure";	tDowngrade::ReadCookie::Secure"] = 26] = "CookieIssue::ExcludeContextDowngrade::ReadCookie::Secure";\012  IssueCreated2
+43565231	Cookie::Insecure"] = 27] = "CookieIssue::ExcludeContextDowngrade::ReadCookie::Insecure"	tDowngrade::ReadCookie::Insecure"] = 27] = "CookieIssue::ExcludeContextDowngrade::ReadCookie::Insecure";\012  IssueCreated
+43565392	Cookie::Secure"] = 28] = "CookieIssue::ExcludeContextDowngrade::SetCookie::Secure";	xtDowngrade::SetCookie::Secure"] = 28] = "CookieIssue::ExcludeContextDowngrade::SetCookie::Secure";\012  IssueCreated2
+43565548	Cookie::Insecure"] = 29] = "CookieIssue::ExcludeContextDowngrade::SetCookie::Insecure";	xtDowngrade::SetCookie::Insecure"] = 29] = "CookieIssue::ExcludeContextDowngrade::SetCookie::Insecure";\012  IssueCreated2
+54699422	Host: null	: null, frontendHost: null }) {\012    const 
+54811833	Cookie: "Show Requests With This Cookie",	RequestsWithThisCookie: "Show Requests With This Cookie",\012  showIssueAsso
+54947200	host: this	shadow, {\012      host: this\012    });\012  }\012  r
+54952134	host: this	shadow, {\012      host: this\012    });\012  }\012  r
+54954049	host: this	shadow, {\012      host: this\012    });\012  }\012}\012C
+54963943	host: this	shadow, {\012      host: this\012    });\012  }\012  r
+54993290	host: this	 this.shadow, { host: this });\012      retur
+54993756	host: this	 this.shadow, { host: this });\012  }\012}\012Compo
+54996550	host: this	 this.shadow, { host: this });\012  }\012  rende
+54996914	host: this	 this.shadow, { host: this });\012  }\012  onCli
+55037127	host: this	 this.shadow, { host: this });\012  }\012}\012const
+55038323	host: this	 this.shadow, { host: this });\012      retur
+55038927	host: this	 this.shadow, { host: this });\012  }\012}\012expor
+55039527	host: this	 this.shadow, { host: this });\012  }\012}\012Compo
+44735187	cookie: Cookie.fromProtocolCookie(cookie) });	blockedReasons, cookie: Cookie.fromProtocolCookie(cookie) });\012      }\012    }\012 
+44736005	cookie: blockedCookie.cookie ? Cookie.fromProtocolCookie(blockedCookie.cookie) : null	Line,\012          cookie: blockedCookie.cookie ? Cookie.fromProtocolCookie(blockedCookie.cookie) : null\012        };\012    
+55283190	host: this	 this.shadow, { host: this });\012  }\012  onSli
+55559702	host:host	rder: none;\012}\012\012:host:host-context(.platfo
+55561570	host:host	cus-color);\012}\012\012:host:host-context(.platfo
+55561877	host:host	ackground);\012}\012\012:host:host-context(.platfo
+45318109	Host: Host.InspectorFrontendHost.InspectorFrontendHostInstance	window, frontendHost: Host.InspectorFrontendHost.InspectorFrontendHostInstance });\012    self.UI
+45346673	host:9229	ress (e.g. localhost:9229)"\012};\012const str_
+45354740	host: parts	ocations.push({ host: parts[0], port });\012  
+45413016	Cookie: "SetCookie", ReadCookie: "ReadCookie" });	peration", { SetCookie: "SetCookie", ReadCookie: "ReadCookie" });\012  inspectorBack
+46308005	Cookie::Secure", sameSiteWarnCrossDowngradeRead(true)],	sDowngrade::ReadCookie::Secure", sameSiteWarnCrossDowngradeRead(true)],\012  ["CookieIssue
+46308102	Cookie::Insecure", sameSiteWarnCrossDowngradeRead(false)],	sDowngrade::ReadCookie::Insecure", sameSiteWarnCrossDowngradeRead(false)],\012  ["CookieIssue
+46308201	Cookie::Secure", sameSiteWarnCrossDowngradeSet(true)],	ssDowngrade::SetCookie::Secure", sameSiteWarnCrossDowngradeSet(true)],\012  ["CookieIssue
+46308296	Cookie::Insecure", sameSiteWarnCrossDowngradeSet(false)],	ssDowngrade::SetCookie::Insecure", sameSiteWarnCrossDowngradeSet(false)],\012  ["CookieIssue
+46308637	Cookie::Secure", sameSiteExcludeContextDowngradeRead(true)],	tDowngrade::ReadCookie::Secure", sameSiteExcludeContextDowngradeRead(true)],\012  ["CookieIssue
+46308744	Cookie::Insecure", sameSiteExcludeContextDowngradeRead(false)],	tDowngrade::ReadCookie::Insecure", sameSiteExcludeContextDowngradeRead(false)],\012  ["CookieIssue
+46308853	Cookie::Secure", sameSiteExcludeContextDowngradeSet(true)],	xtDowngrade::SetCookie::Secure", sameSiteExcludeContextDowngradeSet(true)],\012  ["CookieIssue
+46308958	Cookie::Insecure", sameSiteExcludeContextDowngradeSet(false)],	xtDowngrade::SetCookie::Insecure", sameSiteExcludeContextDowngradeSet(false)],\012  ["CookieIssue
+47629547	host: this	this.#shadow, { host: this });\012    });\012  }
+47646255	host: this	this.#shadow, { host: this });\012  }\012  #buil
+47655168	host: this	this.#shadow, { host: this });\012    });\012  }
+47678482	host: this	this.#shadow, { host: this });\012  }\012  #rend
+47682356	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+47688146	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+47688852	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+47696632	host: this	this.#shadow, { host: this });\012    });\012  }
+47710617	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+47712328	host: this	this.#shadow, { host: this });\012  }\012}\012expor
+47714889	host: this	this.#shadow, { host: this });\012  }\012  #buil
+47717544	host: this	this.#shadow, { host: this });\012  }\012  #rend
+47723280	host: this	this.#shadow, { host: this });\012  }\012}\012expor
+47724431	host: this	this.#shadow, { host: this });\012    });\012  }
+47729067	host: this	this.#shadow, { host: this });\012  }\012}\012expor
+47729952	host: this	this.#shadow, { host: this });\012  }\012}\012expor
+47732019	host: this	this.#shadow, { host: this });\012      retur
+47732349	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+47734827	host: this	this.#shadow, { host: this });\012  }\012}\012expor
+47735777	host: this	this.#shadow, { host: this });\012  }\012  #rend
+47772254	host: this	this.#shadow, { host: this });\012        ret
+47774282	host: this	this.#shadow, { host: this });\012    });\012  }
+47777332	host: this	this.#shadow, { host: this });\012  }\012  #buil
+47779242	host: this	this.#shadow, { host: this });\012        ret
+47780151	host: this	this.#shadow, { host: this });\012    });\012  }
+47782837	host: this	this.#shadow, { host: this });\012  }\012  #buil
+48228092	host: this	shadow, {\012      host: this\012    });\012    con
+48768812	host: this	this.#shadow, { host: this });\012    });\012  }
+48776369	host: this	shadow, {\012      host: this\012    });\012  }\012}\012C
+48778248	host: this	shadow, {\012      host: this\012    });\012  }\012}\012C
+48780548	host: this	shadow, {\012      host: this\012    });\012  }\012}\012C
+48797143	host: this	shadow, {\012      host: this\012    });\012  }\012}\012C
+48798997	host: this	shadow, {\012      host: this\012    });\012  }\012}\012C
+48800423	host: this	shadow, {\012      host: this\012    });\012  }\012}\012C
+48808683	host: this	this.#shadow, { host: this });\012    void th
+48812529	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+48813578	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+48819133	host: this	shadow, {\012      host: this\012    });\012  }\012  #
+48825822	host: this	shadow, {\012      host: this\012    });\012  }\012  #
+48829085	host: this	shadow, {\012      host: this\012    });\012  }\012  #
+48975106	host: this	, this.#root, { host: this });\012  }\012  #fire
+49127880	Cookie: "SameSite Cookie",	ent",\012  samesiteCookie: "SameSite Cookie",\012  heavyAds: "He
+49144043	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+49866178	subject: "Subject",	Certificate",\012  subject: "Subject",\012  validFrom: "V
+49880593	host: this	this.#shadow, { host: this });\012  }\012  focus
+49890310	host: this	this.#shadow, { host: this });\012  }\012  #rend
+49901576	host: this	this.#shadow, { host: this });\012  }\012  #mayb
+49912083	host: this	this.#shadow, { host: this });\012  }\012  #rend
+49923014	host: this	this.#shadow, { host: this });\012  }\012  #onSu
+49927810	host: this	this.#shadow, { host: this });\012  }\012  #rend
+49950853	host: this	this.#shadow, { host: this });\012  }\012  async
+49959202	host: this	this.#shadow, { host: this });\012  }\012}\012Compo
+82563099	HOST: 239.255.255.250	RCH * HTTP/1.1\015\012HOST: 239.255.255.250:1900\015\012MAN: "ssd
+157922516	Mon, 01 Jan 1990 00:00:00 GMT	o-cache\000expires:Mon, 01 Jan 1990 00:00:00 GMT\000date:Mon, 20 Ma
+176306577	Mon, 01 Jan 1990 00:00:00 GMT	08 GMT\000expires: Mon, 01 Jan 1990 00:00:00 GMT\000p3p: CP="This i
+176393767	Mon, 01 Jan 1990 00:00:00 GMT	o-cache\000expires:Mon, 01 Jan 1990 00:00:00 GMT\000date:Mon, 20 Ma
+36124414-GZIP-5644	host: resultsGroup.host	e,\015\012            host: resultsGroup.host,\015\012            i
+36124414-GZIP-5689	Host: resultsGroup.isTypedHost	         isTypedHost: resultsGroup.isTypedHost,\015\012        };\015\012 
+36898269-GZIP-133295	Host:function	r;},convertColonHost:function(cssText){return
+36898269-GZIP-220989	Host:function	on(){},_registerHost:function(host){this.data
+36898269-GZIP-236966	host:this.node	yRoot?this.node.host:this.node;if(ref_node){Tr
+36898269-GZIP-238044	host:this.node	yRoot?this.node.host:this.node;var parent=Tree
+36898269-GZIP-240804	Host:function	ot);},_addNodeToHost:function(host,node){if(h
+36898269-GZIP-240891	Host:function	,_removeNodeFromHost:function(host,node){if(h
+36898269-GZIP-355038	Host:isHost	lectorToMatch,isHost:isHost,isRoot:isRoot})
+36898269-GZIP-363787	Host:function	();}},_findStyleHost:function(){var e=this,ro
+36898269-GZIP-366588	Host:this	mHost||this.dataHost:this;if(host){value=
+36898269-GZIP-372950	Host:function	r;},_getRootDataHost:function(){return this.d
+38257166-GZIP-78776	host:t	umentFragment?t.host:t}distributeConte
+36898269-GZIP-2207876	host:urlHostMatch	ostMatch[1]||'',host:urlHostMatch[2]||'',port:url
+258595987	Cookie: 	e::SetAccountsInCookie: \000 \000!account_id.e
+258596056	Cookie: 	ce::AddAccountToCookie: \000GaiaCookieManag
+588363939	Cookie: 	e::SetAccountsInCookie: \000 \000!account_id.e
+588364008	Cookie: 	ce::AddAccountToCookie: \000GaiaCookieManag
+33390137	Subject:Keywords:Created:Modified:Application:PDF producer:PDF version:Page count:Page s	ze:Title:Author:Subject:Keywords:Created:Modified:Application:PDF producer:PDF version:Page count:Page size:$1 × $2 in 
+867395013	Subject: 	nt-Location: \000\015\012Subject: \000\015\012Date: \000\015\012MIME
+1092946291	Cookie: 	e::SetAccountsInCookie: \000!account_id.emp
+1092946358	Cookie: 	ce::AddAccountToCookie: \000GaiaCookieManag
+1099724910	host:port	\000\000\000\000\000\000\000\000Invalid host:port pattern '*'\000\000\000\252
+1100344275	host:8080	\252\252\252\252\252\252\252\252\252\252\252localhost:8080\0008080\000\000\000\000\000\252\252\252\252\252\252
+1100846850	host: couldn	 native message host: couldn't pick a profil
+1101328635	host:9222	\252\252\252\252\252\252\252\252\252\252\252localhost:9222\000localhost:9229\000
+1101328650	host:9229	lhost:9222\000localhost:9229\000\000\000\252\252\252\252\252\252\252\252\252\252\252\252\252
+1104829190	host:devices	\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000host:devices\000\000\000\000\252\252\252\252\252\252\252\252\252\252\252\252
+1104829414	host:transport	\252\252\252\252\252\252\252\252\252\252\252\252\252\252\252\252host:transport:%s|%s\000\011 \000\001\000\000\000\000\000
+1106625590	host:transport	\001\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000host:transport:%s\000\000\000\000\000\000\000\252\252\252\252\252\252
+1380141699	Cookie: 	e::SetAccountsInCookie: \000GaiaCookieManag
+1380141746	Cookie: 	ce::AddAccountToCookie: \000GaiaCookieManag
+1538141039	cookie: 	c\000Invalid state cookie: \000Invalid state c
+1793671331	Cookie: 	e::SetAccountsInCookie: \000!account_id.emp
+1793671398	Cookie: 	ce::AddAccountToCookie: \000GaiaCookieManag
+1838118106	subject: '	. sni: '\000' cert subject: '\000Sending inchoat
+1712303583	Host: Not	\000AttributionDataHost: Not eligible for so
+1712303714	Host: Not	\000AttributionDataHost: Not eligible for tr
+1713614304	Host: Database	base\000WebDatabaseHost: Database not opened on m
+1713614351	Host: Database	dify\000WebDatabaseHost: Database not opened on c
+1713614412	Host: Invalid	base\000WebDatabaseHost: Invalid origin.\000Validat
+1713614617	Host: Unauthorized	\200\372\000\000WebDatabaseHost: Unauthorized origin.\000Validat
+1892525157	Subject:%c	0x%lx)\012\000        Subject:%c\000        Subject

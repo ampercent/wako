@@ -1,0 +1,23 @@
+# BANNER FILE NOT PROVIDED (-b option)
+# BULK_EXTRACTOR-Version: 2.0.2
+# Feature-Recorder: aes_keys
+# Filename: Evidence\case1.dmp
+# Feature-File-Version: 1.1
+4359806	7f c5 30 e7 02 20 86 e4 02 01 37 26 63 8a 06 0b fa a9 f9 33 db 92 a6 24 04 3b cf bc 07 e9 93 61	AES256
+32905118	6f ab 8f 01 96 a4 01 1c 05 aa d4 71 ec 49 86 39 1b 37 a6 13 d9 73 12 43 b7 8d c0 5f 25 99 1b aa	AES256
+32909726	07 c3 43 98 4b 32 1f 2e d4 3e e3 44 c6 bb 14 c5 7b 27 e8 11 47 62 25 1d 5b 9f 1f 7e 04 24 7a 48	AES256
+32910494	63 96 14 e9 36 3e 85 41 4a d2 e7 85 f8 de be eb d8 d1 64 9e 5f f0 54 82 34 57 4d 0d 75 97 7d 76	AES256
+63872446	4b ab e4 10 fe bc cb 03 ad ea ed 27 7e 2e d0 b7 6f e3 6f 18 08 93 e0 5b e6 68 9f a5 07 62 03 aa	AES256
+66730926	68 bb ed e2 8d 73 44 88 b3 c1 98 d8 99 32 d8 57 50 31 9f c8 bb 8d 43 c5 04 bd ad 8b 62 ea f5 a1	AES256
+75522878	64 79 31 2d 70 e2 9f 2b 5e 36 0c c1 1e 05 c8 ad 0f 46 aa 16 00 9d 19 89 ff 7b de 46 b2 f4 7b 45	AES256
+76420670	56 65 73 4c 8b 3d 1a d1 d1 8e 20 2e 68 92 1c 3e 0c aa 5f a1 8b 0a 32 9f b1 ca b0 31 5e dc ac 65	AES256
+86271566	34 d4 03 1d a9 df 67 b3 6b 0b b0 cb 49 e4 3d c8 fe 70 a9 dd 39 0f 55 3d 60 32 c0 ae 6b be 5a 1d	AES256
+86272718	7d 83 5d a3 9b be 07 41 2f 83 7f 9e c8 8d 45 ec c4 42 ee c3 cc f6 a4 5d 6a ed 54 38 e2 09 b7 00	AES256
+86275790	f5 b9 74 87 e5 13 65 4e 87 e0 a1 ca 7b 44 dd 9f 05 0d 9e 71 90 b0 f6 9a bd 45 be e0 b0 fb 1d ad	AES256
+86276174	57 a9 5a 0a d3 03 91 ca 5c 50 4f c5 8b 03 d8 c4 7e 3c fa 7e 73 d0 40 39 a1 b3 a4 ea 38 68 37 77	AES256
+89319710	36 a6 a6 5a af d6 bd 8b f2 2a d8 db dd eb 2c 04 1f 9b 73 9a 25 04 9d 3f 80 00 61 f3 df 65 eb 7d	AES256
+89320094	3a c3 00 d1 c2 30 44 c1 61 06 03 dc d0 62 b0 12 5a 4c 4b 22 97 2e 8e 9a 26 9d 15 cf 0f 5e e4 ca	AES256
+89322398	eb 54 fc df 30 d6 3d c3 dd a7 36 06 20 65 f2 52 99 8c 9e 7e f7 b1 f0 d9 bb 44 ca b1 32 3f b9 3b	AES256
+181091886	0d 8f 4e 9e d9 55 6c f7 bc 05 27 96 80 85 9f 32 9b 06 c3 d5 f9 e6 75 22 7e e9 3e b2 02 8e 2b f7	AES256
+181095342	8c 09 71 1f 02 b6 8a 8b af 60 ab d6 d8 7c 0f 27 d3 db f8 33 8b 66 cf f8 87 f7 b1 42 65 28 ed a5	AES256
+181109166	db e7 37 8c 2a 7e 6a 53 0c cf 37 5b 99 4a f2 85 22 4e 54 9e 00 fc 82 7b ce 3b 32 36 d0 ad dd 6d	AES256

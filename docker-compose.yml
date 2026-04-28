@@ -1,0 +1,97 @@
+# ═══════════════════════════════════════════════════════════════
+# Antigravity Forensics — Docker Compose (Production)
+# ═══════════════════════════════════════════════════════════════
+# Start:  docker compose up -d
+# Stop:   docker compose down
+# Logs:   docker compose logs -f
+# ═══════════════════════════════════════════════════════════════
+
+services:
+
+  # ── Backend (FastAPI + Uvicorn) ────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: antigravity-backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - DATABASE_PATH=/app/data/cases.db
+      - CORE_DB_PATH=/app/data/core_forensics.db
+      - MEMORY_DUMP=/app/evidence/msedge.DMP
+      - TOOLS_DIR=/app/tools
+      - OUTPUT_DIR=/app/output
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - db-data:/app/data
+      - ./Evidence:/app/evidence:ro
+      - ./Tools:/app/tools:ro
+      - ./Layer1_Output_Edge:/app/output:ro
+    ports:
+      - "8001:8001"
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 1024M
+        reservations:
+          cpus: "0.5"
+          memory: 256M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "5"
+    networks:
+      - forensics-net
+
+  # ── Frontend (Nginx + Vite build) ──────────────────────────
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: antigravity-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 128M
+        reservations:
+          cpus: "0.1"
+          memory: 32M
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:80/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - forensics-net
+
+# ── Volumes ──────────────────────────────────────────────────
+volumes:
+  db-data:
+    driver: local
+
+# ── Networks ─────────────────────────────────────────────────
+networks:
+  forensics-net:
+    driver: bridge

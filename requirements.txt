@@ -4,3 +4,9 @@ plotly
 altair
 graphviz
 regex
+fpdf
+networkx
+scikit-learn
+requests
+passlib[bcrypt]
+PyJWT

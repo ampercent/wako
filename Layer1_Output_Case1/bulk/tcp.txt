@@ -1,0 +1,6 @@
+# BANNER FILE NOT PROVIDED (-b option)
+# BULK_EXTRACTOR-Version: 2.0.2
+# Feature-Recorder: tcp
+# Filename: Evidence\case1.dmp
+# Feature-File-Version: 1.1
+2012441670	inet_ntop win32 11944 -> inet_ntop win32 313 (TCP)	 Size: 295

@@ -1,0 +1,7 @@
+# BANNER FILE NOT PROVIDED (-b option)
+# BULK_EXTRACTOR-Version: 2.0.2
+# Feature-Recorder: ip
+# Filename: Evidence\case1.dmp
+# Feature-File-Version: 1.1
+2012441670	inet_ntop win32	struct ip6_hdr R (src) cksum-ok
+2012441670	inet_ntop win32	struct ip6_hdr L (dst) cksum-ok

@@ -1,0 +1,7 @@
+# BANNER FILE NOT PROVIDED (-b option)
+# BULK_EXTRACTOR-Version: 2.0.2
+# Feature-Recorder: utmp_carved
+# Filename: Evidence\case1.dmp
+# Feature-File-Version: 1.1
+138183648	utmp_carved/000/138183648utmp	<fileobject><filename>utmp_carved/000/138183648utmp</filename><filesize>384</filesize><hashdigest type='sha1'>c2d930ee7b1252f1dfed4183e7f6bf649dab34a5</hashdigest></fileobject>
+138261384	utmp_carved/000/138261384utmp	<fileobject><filename>utmp_carved/000/138261384utmp</filename><filesize>384</filesize><hashdigest type='sha1'>9a407d56b54a62a56aaba42d6b1e6ebee3be467a</hashdigest></fileobject>

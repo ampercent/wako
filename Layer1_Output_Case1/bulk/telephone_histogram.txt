@@ -1,0 +1,6 @@
+# BANNER FILE NOT PROVIDED (-b option)
+# BULK_EXTRACTOR-Version: 2.0.2
+# Feature-Recorder: telephone
+# Filename: Evidence\case1.dmp
+# Histogram-File-Version: 1.1
+n=4	4005001500

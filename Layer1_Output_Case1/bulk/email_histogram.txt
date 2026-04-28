@@ -1,0 +1,25 @@
+# BANNER FILE NOT PROVIDED (-b option)
+# BULK_EXTRACTOR-Version: 2.0.2
+# Feature-Recorder: email
+# Filename: Evidence\case1.dmp
+# Histogram-File-Version: 1.1
+n=24	ararara.nam@gmail.com	(utf16=11)
+n=10	rik@webkit.org
+n=9	appro@openssl.org
+n=7	info@e-szigno.hu
+n=2	arararanam@gmail.com
+n=2	identifierararara.nam@gmail.com
+n=1	accv@accv.es
+n=1	admin@foo.com
+n=1	alice.bloggs@gmail.com
+n=1	bob.bloggs@gmail.com
+n=1	chrome-counter-abuse-alerts@google.com
+n=1	chrome-desktop-ntp@google.com
+n=1	chrome-kids-eng@google.com
+n=1	ffmpeg-devel@ffmpeg.org
+n=1	gcm@android.com
+n=1	gcm@chrome.com
+n=1	info@izenpe.com
+n=1	sam.sample@intercepted.com
+n=1	tessa.tester@primary.com
+n=1	thefrog@chromium.org

@@ -1,0 +1,46 @@
+# ── Git ──────────────────────────────────────────────────────
+.git
+.gitignore
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+my_venv
+venv*
+
+# ── Node ─────────────────────────────────────────────────────
+frontend/node_modules
+frontend/dist
+
+# ── Evidence & Output (mounted as volumes) ───────────────────
+Evidence
+Layer1_Output*
+Tools
+Tools-*
+Scripts-*
+
+# ── Database files (mounted as volumes) ──────────────────────
+*.db
+*.db-wal
+*.db-shm
+
+# ── IDE / OS ─────────────────────────────────────────────────
+.vscode
+.idea
+desktop.ini
+*.pdf
+
+# ── Docker ───────────────────────────────────────────────────
+Dockerfile.*
+docker-compose.yml
+.dockerignore
+.env
+.env.example
+
+# ── Docs & Tests ─────────────────────────────────────────────
+docs
+tests
+scripts
+*.md

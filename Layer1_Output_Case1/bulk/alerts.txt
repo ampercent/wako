@@ -1,0 +1,40 @@
+# BANNER FILE NOT PROVIDED (-b option)
+# BULK_EXTRACTOR-Version: 2.0.2
+# Feature-Recorder: alerts
+# Filename: Evidence\case1.dmp
+# Feature-File-Version: 1.1
+234881024	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=21830144]</exception>
+251658240	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=12433920]</exception>
+268435456	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=12218880]</exception>
+301989888	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=18925568]</exception>
+335544320	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=36452864]</exception>
+369098752	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=7512064]</exception>
+419430400	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=12421632]</exception>
+436207616	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=13401088]</exception>
+469762048	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=18450432]</exception>
+503316480	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=20897792]</exception>
+536870912	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=12997120]</exception>
+553648128	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=31538176]</exception>
+587202560	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=14883328]</exception>
+620756992	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=13309952]</exception>
+637534208	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=12609024]</exception>
+654311424	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=35628544]</exception>
+687865856	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=16271360]</exception>
+704643072	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=102759936]</exception>
+805306368	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=64715264]</exception>
+872415232	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=264615936]</exception>
+1157627904	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=105736704]</exception>
+1258291200	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=49297408]</exception>
+1325400064	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=11706368]</exception>
+1342177280	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=12440064]</exception>
+1358954496	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=10966016]</exception>
+1375731712	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=14366208]</exception>
+1409286144	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=12548608]</exception>
+1442840576	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=37224960]</exception>
+1493172224	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=46539776]</exception>
+1543503872	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=30943232]</exception>
+1577058304	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=17430528]</exception>
+1593835520	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=22233600]</exception>
+1627389952	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=107909632]</exception>
+1728053248	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=14333952]</exception>
+1744830464	scanner=winpe	<exception>[sbuf_t::range_exception_t: Read past end of sbuf off=0 len=53459968]</exception>

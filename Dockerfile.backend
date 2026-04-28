@@ -1,0 +1,84 @@
+# ═══════════════════════════════════════════════════════════════
+# Antigravity Forensics — Backend Dockerfile (Multi-stage)
+# ═══════════════════════════════════════════════════════════════
+
+# ── Stage 1: Builder ──────────────────────────────────────────
+FROM python:3.11-slim AS builder
+
+WORKDIR /build
+
+# Install build dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    libffi-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy and install Python deps
+COPY requirements.txt .
+COPY requirements.docker.txt .
+RUN pip install --no-cache-dir --prefix=/install \
+    -r requirements.txt \
+    -r requirements.docker.txt
+
+# ── Stage 2: Runtime ─────────────────────────────────────────
+FROM python:3.11-slim AS runtime
+
+# Create non-root user
+RUN groupadd -r forensics && useradd -r -g forensics -d /app -s /sbin/nologin forensics
+
+# Install runtime-only deps (libffi for bcrypt)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libffi-dev \
+    curl \
+    sqlite3 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy installed Python packages from builder
+COPY --from=builder /install /usr/local
+
+# Copy application code
+COPY api.py .
+COPY core/ core/
+COPY pipeline/ pipeline/
+COPY case_management/ case_management/
+COPY reporting/ reporting/
+COPY ioc_extraction/ ioc_extraction/
+COPY intel_enrichment/ intel_enrichment/
+COPY diff_analysis/ diff_analysis/
+COPY playbooks/ playbooks/
+
+# Create data directories
+RUN mkdir -p /app/data /app/evidence /app/output /app/tools \
+    && chown -R forensics:forensics /app
+
+# Environment defaults (overridable via .env / docker-compose)
+ENV DATABASE_PATH=/app/data/cases.db \
+    CORE_DB_PATH=/app/data/core_forensics.db \
+    JWT_SECRET_KEY=change_me_in_production \
+    MEMORY_DUMP=/app/evidence/msedge.DMP \
+    TOOLS_DIR=/app/tools \
+    OUTPUT_DIR=/app/output \
+    LOG_LEVEL=INFO \
+    SIMULATE_MODE=true \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+
+# Switch to non-root
+USER forensics
+
+# Expose API port
+EXPOSE 8001
+
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD curl -f http://localhost:8001/health || exit 1
+
+# Run with uvicorn (logs to stdout)
+CMD ["python", "-m", "uvicorn", "api:app", \
+     "--host", "0.0.0.0", \
+     "--port", "8001", \
+     "--workers", "1", \
+     "--log-level", "info", \
+     "--access-log"]
