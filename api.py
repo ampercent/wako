@@ -182,32 +182,56 @@ class HistoryItem(BaseModel):
 # --- Helpers ---
 def get_mock_ps_df():
     return pd.DataFrame({
-        "PID": [1000, 2010, 3010, 4010, 5010],
-        "PPID": [500, 1000, 3010, 2010, 1000], 
-        "ImageFileName": ["explorer.exe", "certutil.exe", "powershell.exe", "cmd.exe", "chrome.exe"],
+        "PID": [4, 312, 416, 504, 688, 780, 1388, 2256, 2412, 3024, 3340, 3488, 4100, 4264, 4388, 4520, 4680, 4812, 5560, 5720],
+        "PPID": [0, 4, 312, 312, 504, 672, 620, 1388, 1388, 1388, 1388, 1388, 2412, 4100, 4100, 4388, 4100, 4680, 4388, 4100],
+        "ImageFileName": [
+            "System", "smss.exe", "csrss.exe", "wininit.exe", "lsass.exe", "svchost.exe",
+            "explorer.exe", "OUTLOOK.EXE", "EXCEL.EXE", "msedge.exe", "chrome.exe", "chrome.exe",
+            "powershell.exe", "certutil.exe", "cmd.exe", "rundll32.exe", "mshta.exe", "wscript.exe",
+            "ncat.exe", "rclone.exe"
+        ],
         "CreateTime": [
-            "2026-04-10 10:00:00", "2026-04-10 10:05:00", 
-            "2026-04-10 10:06:00", "2026-04-10 10:07:00", "2026-04-10 10:01:00"
+            "2026-04-28 06:32:08", "2026-04-28 06:32:10", "2026-04-28 06:32:12", "2026-04-28 06:32:14",
+            "2026-04-28 06:32:18", "2026-04-28 06:32:20", "2026-04-28 06:33:10", "2026-04-28 07:01:05",
+            "2026-04-28 07:15:22", "2026-04-28 07:05:30", "2026-04-28 09:18:44", "2026-04-28 09:18:46",
+            "2026-04-28 11:42:18", "2026-04-28 11:43:05", "2026-04-28 11:44:30", "2026-04-28 11:45:12",
+            "2026-04-28 11:46:55", "2026-04-28 11:48:20", "2026-04-28 12:10:22", "2026-04-28 12:15:48"
         ]
     })
 
 def get_mock_net_df():
     return pd.DataFrame({
-        "PID": [2010, 3010, 5010],
-        "Proto": ["TCPv4", "TCPv4", "TCPv4"],
-        "LocalAddr": ["192.168.1.10", "192.168.1.10", "192.168.1.10"],
-        "ForeignAddr": ["8.8.8.8", "198.51.100.1", "142.250.190.46"],
-        "ForeignPort": ["443", "4444", "443"],
-        "State": ["ESTABLISHED", "ESTABLISHED", "ESTABLISHED"],
-        "Owner": ["certutil.exe", "powershell.exe", "chrome.exe"],
-        "Created": ["2026-04-10 10:05:30", "2026-04-10 10:06:15", "2026-04-10 10:02:00"]
+        "PID": [780, 2256, 3024, 3340, 3488, 4100, 4100, 4264, 4520, 4520, 4680, 5560, 5560, 5720, 5720],
+        "Proto": ["TCPv4"]*15,
+        "LocalAddr": ["10.0.15.42"]*15,
+        "ForeignAddr": [
+            "20.190.159.71", "52.96.166.130", "204.79.197.200", "142.250.80.46", "185.199.108.133",
+            "198.51.100.14", "203.0.113.88", "198.51.100.14", "45.33.32.156", "192.0.2.100",
+            "203.0.113.22", "0.0.0.0", "198.51.100.14", "162.159.135.232", "162.159.136.232"
+        ],
+        "ForeignPort": ["443", "443", "443", "443", "443", "4443", "8080", "443", "4444", "8443", "443", "0", "48210", "443", "443"],
+        "State": [
+            "ESTABLISHED", "ESTABLISHED", "ESTABLISHED", "ESTABLISHED", "ESTABLISHED",
+            "ESTABLISHED", "ESTABLISHED", "ESTABLISHED", "ESTABLISHED", "ESTABLISHED",
+            "ESTABLISHED", "LISTENING", "ESTABLISHED", "ESTABLISHED", "ESTABLISHED"
+        ],
+        "Owner": [
+            "svchost.exe", "OUTLOOK.EXE", "msedge.exe", "chrome.exe", "chrome.exe",
+            "powershell.exe", "powershell.exe", "certutil.exe", "rundll32.exe", "rundll32.exe",
+            "mshta.exe", "ncat.exe", "ncat.exe", "rclone.exe", "rclone.exe"
+        ],
+        "Created": [
+            "2026-04-28 06:32:25", "2026-04-28 07:01:10", "2026-04-28 07:05:35", "2026-04-28 09:18:50", "2026-04-28 09:18:52",
+            "2026-04-28 11:42:45", "2026-04-28 11:42:50", "2026-04-28 11:43:10", "2026-04-28 11:45:20", "2026-04-28 11:45:25",
+            "2026-04-28 11:47:00", "2026-04-28 12:10:22", "2026-04-28 12:10:30", "2026-04-28 12:15:50", "2026-04-28 12:15:52"
+        ]
     })
 
 def get_mock_malfind_df():
     return pd.DataFrame({
-        "PID": [3010],
-        "Process": ["powershell.exe"],
-        "Protection": ["PAGE_EXECUTE_READWRITE"]
+        "PID": [4100, 4520, 4680],
+        "Process": ["powershell.exe", "rundll32.exe", "mshta.exe"],
+        "Protection": ["PAGE_EXECUTE_READWRITE", "PAGE_EXECUTE_READWRITE", "PAGE_EXECUTE_READWRITE"]
     })
 
 def get_ps_df():

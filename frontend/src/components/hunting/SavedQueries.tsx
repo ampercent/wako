@@ -59,19 +59,19 @@ export const SavedQueries: React.FC = React.memo(() => {
   return (
     <div id="hunt-saved-queries" className="space-y-4">
       {/* ── Header ─────────────────────────────────────────────────── */}
-      <h3 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
+      <h3 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
         <Bookmark className="h-4 w-4" />
         Saved Queries
         {savedQueries.length > 0 && (
-          <span className="ml-auto rounded-full bg-gray-800 px-1.5 py-0.5 text-[9px] font-mono text-gray-500">
+          <span className="ml-auto rounded-full bg-muted px-1.5 py-0.5 text-[9px] font-mono text-muted-foreground">
             {savedQueries.length}
           </span>
         )}
       </h3>
 
       {/* ── Save Input ─────────────────────────────────────────────── */}
-      <div className="rounded-lg border border-gray-800/80 bg-[#0c0f17] p-3">
-        <p className="mb-2 text-[11px] text-gray-500">Save current query:</p>
+      <div className="rounded-lg border border-border bg-card/50 p-3">
+        <p className="mb-2 text-[11px] text-muted-foreground">Save current query:</p>
         <div className="flex gap-2">
           <input
             id="hunt-save-name"
@@ -80,7 +80,7 @@ export const SavedQueries: React.FC = React.memo(() => {
             value={saveName}
             onChange={(e) => setSaveName(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSave()}
-            className="flex-1 rounded-md border border-gray-700/80 bg-gray-900/80 px-2.5 py-1.5 text-xs text-white transition-colors focus:border-indigo-500 focus:outline-none"
+            className="flex-1 rounded-md border border-border bg-background px-2.5 py-1.5 text-xs text-foreground transition-colors focus:border-primary focus:outline-none"
           />
           <button
             id="hunt-save-btn"
@@ -88,8 +88,8 @@ export const SavedQueries: React.FC = React.memo(() => {
             disabled={saving || !saveName.trim() || !query.trim()}
             className={`rounded-md border px-2.5 transition-all disabled:opacity-30 ${
               justSaved
-                ? 'border-emerald-500/40 bg-emerald-500/15 text-emerald-300'
-                : 'border-indigo-500/30 bg-indigo-500/10 text-indigo-300 hover:bg-indigo-500/20'
+                ? 'border-emerald-500/40 bg-emerald-500/15 text-emerald-600'
+                : 'border-primary/30 bg-primary/10 text-primary hover:bg-primary/20'
             }`}
           >
             {saving ? (
@@ -108,14 +108,14 @@ export const SavedQueries: React.FC = React.memo(() => {
         {savedQueries.map((sq) => (
           <div
             key={sq.id}
-            className="group rounded-lg border border-gray-800/60 bg-gray-800/30 p-3 transition-all duration-150 hover:bg-gray-800/60 hover:border-gray-700"
+            className="group rounded-lg border border-border bg-muted/30 p-3 transition-all duration-150 hover:bg-muted/60 hover:border-border/80"
           >
             <div className="mb-1.5 flex items-start justify-between gap-2">
-              <h4 className="text-xs font-semibold text-gray-200 leading-tight">{sq.name}</h4>
+              <h4 className="text-xs font-semibold text-foreground leading-tight">{sq.name}</h4>
               <div className="flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity shrink-0">
                 <button
                   onClick={() => setQuery(sq.query)}
-                  className="rounded p-1 text-gray-400 transition-colors hover:bg-indigo-500/15 hover:text-indigo-300"
+                  className="rounded p-1 text-muted-foreground transition-colors hover:bg-primary/15 hover:text-primary"
                   title="Load query"
                 >
                   <FileInput className="h-3.5 w-3.5" />
@@ -123,7 +123,7 @@ export const SavedQueries: React.FC = React.memo(() => {
                 <button
                   onClick={() => handleDelete(sq.id)}
                   disabled={deletingId === sq.id}
-                  className="rounded p-1 text-gray-400 transition-colors hover:bg-red-500/15 hover:text-red-300 disabled:opacity-50"
+                  className="rounded p-1 text-muted-foreground transition-colors hover:bg-destructive/15 hover:text-destructive disabled:opacity-50"
                   title="Delete query"
                 >
                   {deletingId === sq.id ? (
@@ -135,14 +135,14 @@ export const SavedQueries: React.FC = React.memo(() => {
               </div>
             </div>
             <p
-              className="truncate font-mono text-[11px] text-gray-500 cursor-pointer hover:text-gray-400 transition-colors"
+              className="truncate font-mono text-[11px] text-muted-foreground cursor-pointer hover:text-foreground transition-colors"
               title={sq.query}
               onClick={() => setQuery(sq.query)}
             >
               {sq.query}
             </p>
             {sq.created_at && (
-              <p className="mt-1 text-[9px] text-gray-600">
+              <p className="mt-1 text-[9px] text-muted-foreground/60">
                 {new Date(sq.created_at).toLocaleDateString()}
               </p>
             )}
@@ -151,7 +151,7 @@ export const SavedQueries: React.FC = React.memo(() => {
       </div>
 
       {savedQueries.length === 0 && (
-        <p className="py-4 text-center text-xs italic text-gray-600">
+        <p className="py-4 text-center text-xs italic text-muted-foreground/60">
           No saved queries yet. Run a query and save it above.
         </p>
       )}

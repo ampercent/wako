@@ -6,3 +6,11 @@ __pycache__/
 *.pyc
 Evidence/
 Scripts-*/
+Tools/
+scratch/
+output/
+debug/
+*.db
+node_modules/
+references/
+.env

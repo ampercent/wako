@@ -1,6 +1,0 @@
-# BANNER FILE NOT PROVIDED (-b option)
-# BULK_EXTRACTOR-Version: 2.0.2
-# Feature-Recorder: windirs
-# Filename: Evidence\case1.dmp
-# Feature-File-Version: 1.1
-123206144	E(F(G(H(.I(J	<fileobject src='fat'><atime>2000-02-12T00:00:00</atime><attrib>40</attrib><ctime>1982-05-10T05:02:11</ctime><ctimeten>4</ctimeten><filename>E(F(G(H(.I(J</filename><filesize>78587981</filesize><mtime>1982-05-13T00:37:12</mtime><startcluster>78316718</startcluster></fileobject>

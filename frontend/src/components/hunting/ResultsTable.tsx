@@ -8,10 +8,10 @@ const SEVERITY_RANK: Record<string, number> = { CRITICAL: 4, HIGH: 3, MEDIUM: 2,
 
 function sevClass(value?: string): string {
   const v = (value || '').toUpperCase();
-  if (v === 'CRITICAL') return 'text-red-400 bg-red-500/10 border-red-500/20';
-  if (v === 'HIGH') return 'text-orange-300 bg-orange-500/8 border-orange-500/15';
-  if (v === 'MEDIUM') return 'text-yellow-300 bg-yellow-500/8 border-yellow-500/15';
-  return 'text-gray-400 bg-gray-500/8 border-gray-500/15';
+  if (v === 'CRITICAL') return 'text-destructive bg-destructive/10 border-destructive/20';
+  if (v === 'HIGH') return 'text-warning bg-warning/8 border-warning/15';
+  if (v === 'MEDIUM') return 'text-yellow-500 bg-yellow-500/8 border-yellow-500/15';
+  return 'text-muted-foreground bg-muted/8 border-border/15';
 }
 
 type SortKey = 'case_id' | 'timestamp' | 'process_name' | 'severity' | 'source';
@@ -123,16 +123,16 @@ export const ResultsTable: React.FC = React.memo(() => {
   /* ── Empty State ────────────────────────────────────────────────── */
   if (!results.length) {
     return (
-      <div className="flex h-full flex-col items-center justify-center text-gray-600 gap-4 py-20">
+      <div className="flex h-full flex-col items-center justify-center text-muted-foreground gap-4 py-20">
         <div className="relative">
           <Crosshair className="h-16 w-16 opacity-10 absolute blur-lg" />
           <Crosshair className="h-16 w-16 opacity-25 relative" />
         </div>
-        <p className="font-mono text-sm uppercase tracking-[0.2em] text-gray-600">
+        <p className="font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground">
           Run a query to begin hunting
         </p>
-        <p className="text-xs text-gray-700 max-w-xs text-center">
-          Enter a query above and press <kbd className="px-1.5 py-0.5 rounded bg-gray-800 text-gray-400 text-[10px] font-mono">Enter</kbd> or click <span className="text-indigo-400">Run Hunt</span>.
+        <p className="text-xs text-muted-foreground/80 max-w-xs text-center">
+          Enter a query above and press <kbd className="px-1.5 py-0.5 rounded bg-muted text-muted-foreground text-[10px] font-mono">Enter</kbd> or click <span className="text-primary">Run Hunt</span>.
         </p>
       </div>
     );
@@ -149,13 +149,13 @@ export const ResultsTable: React.FC = React.memo(() => {
             value={tableFilter}
             onChange={(e) => setTableFilter(e.target.value)}
             placeholder="Filter by case, process, host..."
-            className="rounded-md border border-gray-700/80 bg-gray-900/80 px-3 py-2 text-xs text-gray-200 transition-colors focus:border-indigo-500 focus:outline-none w-48"
+            className="rounded-md border border-border bg-card px-3 py-2 text-xs text-foreground transition-colors focus:border-primary focus:outline-none w-48"
           />
           <select
             id="hunt-severity-filter"
             value={severityFilter}
             onChange={(e) => setSeverityFilter(e.target.value)}
-            className="rounded-md border border-gray-700/80 bg-gray-900/80 px-2 py-2 text-xs text-gray-200 transition-colors focus:border-indigo-500 focus:outline-none cursor-pointer"
+            className="rounded-md border border-border bg-card px-2 py-2 text-xs text-foreground transition-colors focus:border-primary focus:outline-none cursor-pointer"
           >
             <option value="ALL">All Severity</option>
             <option value="CRITICAL">CRITICAL</option>
@@ -166,10 +166,10 @@ export const ResultsTable: React.FC = React.memo(() => {
         </div>
 
         <div className="flex items-center gap-3">
-          <p className="font-mono text-[11px] text-gray-500">
-            <span className="text-indigo-400">{filteredAndSorted.length}</span>
+          <p className="font-mono text-[11px] text-muted-foreground">
+            <span className="text-primary">{filteredAndSorted.length}</span>
             {filteredAndSorted.length !== lastQueryCount && (
-              <span className="text-gray-600"> / {lastQueryCount}</span>
+              <span className="text-muted-foreground/60"> / {lastQueryCount}</span>
             )}
             {' '}matches
           </p>
@@ -177,16 +177,16 @@ export const ResultsTable: React.FC = React.memo(() => {
       </div>
 
       {/* ── Table ──────────────────────────────────────────────────── */}
-      <div className="overflow-x-auto rounded-lg border border-gray-800/80 shadow-lg">
+      <div className="overflow-x-auto rounded-lg border border-border shadow-lg">
         <table className="min-w-full text-left text-xs">
-          <thead className="bg-gray-900/90 text-[10px] uppercase tracking-wider text-gray-500 select-none">
+          <thead className="bg-muted/90 text-[10px] uppercase tracking-wider text-muted-foreground select-none">
             <tr>
               {COLUMNS.map(({ key, label }) => (
                 <th key={key} className="px-3 py-2.5">
                   <button
                     onClick={() => setSortField(key)}
-                    className={`inline-flex items-center gap-1 transition-colors hover:text-white ${
-                      sortField === key ? 'text-indigo-400' : 'text-gray-400'
+                    className={`inline-flex items-center gap-1 transition-colors hover:text-foreground ${
+                      sortField === key ? 'text-primary' : 'text-muted-foreground'
                     }`}
                   >
                     {label}
@@ -194,34 +194,34 @@ export const ResultsTable: React.FC = React.memo(() => {
                   </button>
                 </th>
               ))}
-              <th className="px-3 py-2.5 text-right text-gray-500">Action</th>
+              <th className="px-3 py-2.5 text-right text-muted-foreground">Action</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-800/60">
+          <tbody className="divide-y divide-border">
             {pageRows.map((row, idx) => (
               <tr
                 key={`${row.case_id}-${row.timestamp}-${idx}`}
                 onClick={() => handleInvestigate(row)}
-                className="group cursor-pointer bg-[#0b0f19] transition-all duration-150 hover:bg-indigo-500/[0.04] hover:shadow-[inset_2px_0_0_rgba(99,102,241,0.4)]"
+                className="group cursor-pointer bg-card transition-all duration-150 hover:bg-primary/5 hover:shadow-[inset_2px_0_0_hsl(var(--primary))]"
               >
-                <td className="px-3 py-2.5 font-mono text-gray-300">{row.case_id}</td>
-                <td className="px-3 py-2.5 font-mono text-gray-500 text-[11px]">
+                <td className="px-3 py-2.5 font-mono text-muted-foreground">{row.case_id}</td>
+                <td className="px-3 py-2.5 font-mono text-muted-foreground/60 text-[11px]">
                   {row.timestamp ? new Date(row.timestamp).toLocaleString() : '-'}
                 </td>
-                <td className="px-3 py-2.5 text-gray-200 font-medium">{row.process_name || '-'}</td>
+                <td className="px-3 py-2.5 text-foreground font-medium">{row.process_name || '-'}</td>
                 <td className="px-3 py-2.5">
                   <span className={`inline-block rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${sevClass(String(row.severity))}`}>
                     {String(row.severity || 'LOW').toUpperCase()}
                   </span>
                 </td>
-                <td className="px-3 py-2.5 text-gray-400">{row.source || '-'}</td>
+                <td className="px-3 py-2.5 text-muted-foreground">{row.source || '-'}</td>
                 <td className="px-3 py-2.5 text-right">
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       handleInvestigate(row);
                     }}
-                    className="inline-flex items-center gap-1 rounded-md border border-indigo-500/30 bg-indigo-500/8 px-2.5 py-1 text-[10px] font-semibold text-indigo-300 transition-all hover:bg-indigo-500/15 hover:border-indigo-500/50 opacity-60 group-hover:opacity-100"
+                    className="inline-flex items-center gap-1 rounded-md border border-primary/30 bg-primary/10 px-2.5 py-1 text-[10px] font-semibold text-primary transition-all hover:bg-primary/20 hover:border-primary/50 opacity-60 group-hover:opacity-100"
                   >
                     <ExternalLink className="h-3 w-3" />
                     Pivot
@@ -243,7 +243,7 @@ export const ResultsTable: React.FC = React.memo(() => {
 
       {/* ── Pagination ─────────────────────────────────────────────── */}
       <div className="flex items-center justify-between">
-        <p className="text-[11px] text-gray-600">
+        <p className="text-[11px] text-muted-foreground">
           Page {safePage} of {totalPages}
         </p>
         <div className="flex items-center gap-1">
@@ -251,7 +251,7 @@ export const ResultsTable: React.FC = React.memo(() => {
             id="hunt-page-prev"
             onClick={() => setPage(Math.max(safePage - 1, 1))}
             disabled={safePage <= 1}
-            className="rounded-md border border-gray-700/80 bg-gray-900/80 p-1.5 text-gray-400 transition-colors hover:text-white disabled:opacity-30 disabled:cursor-not-allowed"
+            className="rounded-md border border-border bg-card p-1.5 text-muted-foreground transition-colors hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed"
           >
             <ChevronLeft className="h-4 w-4" />
           </button>
@@ -267,8 +267,8 @@ export const ResultsTable: React.FC = React.memo(() => {
                 onClick={() => setPage(pageNum)}
                 className={`h-7 w-7 rounded-md text-xs font-mono transition-all ${
                   pageNum === safePage
-                    ? 'bg-indigo-600/80 text-white shadow-sm'
-                    : 'bg-gray-900/60 text-gray-500 hover:text-white hover:bg-gray-800'
+                    ? 'bg-primary text-primary-foreground shadow-sm'
+                    : 'bg-card text-muted-foreground hover:text-foreground hover:bg-muted'
                 }`}
               >
                 {pageNum}
@@ -280,7 +280,7 @@ export const ResultsTable: React.FC = React.memo(() => {
             id="hunt-page-next"
             onClick={() => setPage(Math.min(safePage + 1, totalPages))}
             disabled={safePage >= totalPages}
-            className="rounded-md border border-gray-700/80 bg-gray-900/80 p-1.5 text-gray-400 transition-colors hover:text-white disabled:opacity-30 disabled:cursor-not-allowed"
+            className="rounded-md border border-border bg-card p-1.5 text-muted-foreground transition-colors hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed"
           >
             <ChevronRight className="h-4 w-4" />
           </button>

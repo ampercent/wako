@@ -111,7 +111,7 @@ export const QueryBar: React.FC<QueryBarProps> = React.memo(({ onRunSuccess }) =
       {/* ─── Input Row ─────────────────────────────────────────────── */}
       <div className="flex flex-col gap-3 xl:flex-row xl:items-center">
         <div className="relative flex-1 group">
-          <Search className="pointer-events-none absolute left-3 top-3.5 h-4 w-4 text-gray-500 transition-colors group-focus-within:text-indigo-400" />
+          <Search className="pointer-events-none absolute left-3 top-3.5 h-4 w-4 text-muted-foreground transition-colors group-focus-within:text-primary" />
           <input
             id="hunt-query-input"
             type="text"
@@ -119,7 +119,7 @@ export const QueryBar: React.FC<QueryBarProps> = React.memo(({ onRunSuccess }) =
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="process_name == 'powershell.exe' AND severity == 'HIGH'"
-            className="w-full rounded-lg border border-gray-700/80 bg-[#080a0f] py-3 pl-10 pr-3 font-mono text-sm text-green-300 placeholder:text-gray-600 transition-all duration-200 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500/30 focus:shadow-[0_0_20px_rgba(99,102,241,0.08)]"
+            className="w-full rounded-lg border border-border bg-background py-3 pl-10 pr-3 font-mono text-sm text-primary placeholder:text-muted-foreground transition-all duration-200 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/30 focus:shadow-[0_0_20px_hsl(var(--primary)/0.08)]"
             spellCheck={false}
             autoComplete="off"
           />
@@ -130,7 +130,7 @@ export const QueryBar: React.FC<QueryBarProps> = React.memo(({ onRunSuccess }) =
             <button
               id="hunt-stop-btn"
               onClick={handleStop}
-              className="inline-flex items-center gap-2 rounded-lg bg-red-600/80 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-white transition-colors hover:bg-red-500"
+              className="inline-flex items-center gap-2 rounded-lg bg-destructive/80 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-destructive-foreground transition-colors hover:bg-destructive"
             >
               <RefreshCw className="h-4 w-4 animate-spin" />
               Cancel
@@ -140,36 +140,22 @@ export const QueryBar: React.FC<QueryBarProps> = React.memo(({ onRunSuccess }) =
               id="hunt-run-btn"
               onClick={runQuery}
               disabled={!query.trim()}
-              className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-3 text-xs font-semibold uppercase tracking-wide text-white transition-all duration-200 hover:bg-indigo-500 hover:shadow-[0_0_20px_rgba(99,102,241,0.25)] disabled:opacity-40 disabled:cursor-not-allowed"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-xs font-semibold uppercase tracking-wide text-primary-foreground transition-all duration-200 hover:bg-primary/90 hover:shadow-[0_0_20px_hsl(var(--primary)/0.25)] disabled:opacity-40 disabled:cursor-not-allowed"
             >
               <Play className="h-4 w-4" />
               Run Hunt
             </button>
           )}
-
-          <button
-            id="hunt-live-toggle"
-            onClick={toggleLive}
-            title={isLive ? 'Stop live hunt (Ctrl+Shift+L)' : 'Start live hunt (Ctrl+Shift+L)'}
-            className={`inline-flex items-center gap-2 rounded-lg border px-3 py-3 text-xs font-semibold uppercase tracking-wide transition-all duration-300 ${
-              isLive
-                ? 'border-emerald-500/60 bg-emerald-950/50 text-emerald-300 shadow-[0_0_16px_rgba(16,185,129,0.12)]'
-                : 'border-gray-700 bg-gray-900/80 text-gray-400 hover:border-indigo-500/60 hover:text-white'
-            }`}
-          >
-            {isLive ? <Zap className="h-4 w-4 animate-pulse" /> : <ZapOff className="h-4 w-4" />}
-            {isLive ? 'Live' : 'Live'}
-          </button>
         </div>
       </div>
 
       {/* ─── Syntax Preview ────────────────────────────────────────── */}
-      <div className="rounded-lg border border-gray-800/80 bg-[#060810] p-3 transition-colors">
-        <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-gray-600">
+      <div className="rounded-lg border border-border bg-card p-3 transition-colors">
+        <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
           Syntax Preview
         </p>
         <pre
-          className="overflow-x-auto whitespace-pre-wrap break-words font-mono text-xs leading-6 text-gray-400"
+          className="overflow-x-auto whitespace-pre-wrap break-words font-mono text-xs leading-6 text-muted-foreground"
           dangerouslySetInnerHTML={{ __html: previewHtml }}
         />
       </div>

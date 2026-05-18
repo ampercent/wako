@@ -1,6 +1,6 @@
 # Antigravity Forensics Pipeline
 
-## 🕵️‍♂️ Project Overview
+## Project Overview
 **Antigravity Forensics** is an end-to-end memory forensics analysis pipeline designed to investigate browser-based cybercrime. It specifically targets volatile memory dumps (`.dmp`) to extract artifacts like:
 *   Running Processes (Browsers)
 *   Network Connections
@@ -11,7 +11,7 @@ The projects wraps standard CLI forensic tools (**Volatility 3**, **Bulk Extract
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```mermaid
 graph TD
@@ -37,7 +37,7 @@ graph TD
     Engine -->|Returns Data| Dashboard
 ```
 
-## 🚀 Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 *   Python 3.10+
@@ -64,7 +64,7 @@ This will launch the GUI at `http://localhost:8501`.
 
 ---
 
-## 🔍 Methodology
+## Methodology
 
 ### 1. Memory Acquisition
 *   **Tools**: DumpIt or FTK Imager.
@@ -85,6 +85,6 @@ This will launch the GUI at `http://localhost:8501`.
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 *   **Memory Size**: Large dumps (32GB+) require significant processing time (20+ mins for `netscan`).
 *   **Encryption**: HTTPS traffic content cannot be decrypted without SSL keys, but DNS/SNI artifacts remain visible in memory strings.

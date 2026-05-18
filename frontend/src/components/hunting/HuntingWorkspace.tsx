@@ -3,7 +3,6 @@ import { useHuntStore } from '../../store/useHuntStore';
 import { executeHuntQuery, cancelActiveHuntRequest, getHuntStats } from '../../api/hunting';
 import { QueryBar } from './QueryBar';
 import { ResultsTable } from './ResultsTable';
-import { SavedQueries } from './SavedQueries';
 import { PatternInsights } from './PatternInsights';
 import { StatsPanel } from './StatsPanel';
 import { Crosshair, Radio } from 'lucide-react';
@@ -77,34 +76,23 @@ export const HuntingWorkspace: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex h-full w-full flex-col overflow-hidden bg-[#070a10] text-gray-300 xl:flex-row">
+    <div className="flex h-full w-full flex-col overflow-hidden bg-background text-foreground xl:flex-row">
       {/* ═══════════════════════════════════════════════════════════════
            LEFT: Query + Results (main workspace)
          ═══════════════════════════════════════════════════════════════ */}
-      <div className="flex min-w-0 flex-1 flex-col border-b border-gray-800/60 xl:border-b-0 xl:border-r">
+      <div className="flex min-w-0 flex-1 flex-col border-b border-border xl:border-b-0 xl:border-r">
         {/* ── Header ───────────────────────────────────────────────── */}
-        <div className="flex h-14 items-center justify-between border-b border-gray-800/60 bg-gray-900/70 px-4 backdrop-blur-sm">
+        <div className="flex h-14 items-center justify-between border-b border-border bg-card px-4 backdrop-blur-sm">
           <div className="flex items-center gap-2.5">
-            <div className="relative">
-              <Crosshair className="h-5 w-5 text-indigo-400" />
-              {isLive && (
-                <span className="absolute -top-0.5 -right-0.5 h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              )}
-            </div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-white">
+            <Crosshair className="h-5 w-5 text-primary" />
+            <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground">
               Threat Hunting
             </h2>
           </div>
 
           <div className="flex items-center gap-3">
-            {isLive && (
-              <div className="flex items-center gap-1.5 text-[10px] font-mono text-emerald-400 animate-pulse">
-                <Radio className="h-3 w-3" />
-                LIVE
-              </div>
-            )}
             {results.length > 0 && (
-              <span className="rounded-full bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 text-[10px] font-mono text-indigo-300 tabular-nums">
+              <span className="rounded-full bg-primary/10 border border-primary/20 px-2.5 py-0.5 text-[10px] font-mono text-primary tabular-nums">
                 {results.length} results
               </span>
             )}
@@ -112,20 +100,20 @@ export const HuntingWorkspace: React.FC = () => {
         </div>
 
         {/* ── Query Bar ────────────────────────────────────────────── */}
-        <div className="border-b border-gray-800/60 bg-gray-900/40 p-4 backdrop-blur-sm">
+        <div className="border-b border-border bg-card/40 p-4 backdrop-blur-sm">
           <QueryBar onRunSuccess={refreshStats} />
         </div>
 
         {/* ── Results ──────────────────────────────────────────────── */}
-        <div className="min-h-0 flex-1 overflow-auto bg-[#080a0f] p-4">
+        <div className="min-h-0 flex-1 overflow-auto bg-background p-4">
           {loading && results.length === 0 ? (
             <div className="flex h-full items-center justify-center">
               <div className="flex flex-col items-center gap-4">
                 <div className="relative">
-                  <div className="h-12 w-12 rounded-full border-2 border-indigo-500/20 border-t-indigo-400 animate-spin" />
-                  <Crosshair className="h-5 w-5 text-indigo-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                  <div className="h-12 w-12 rounded-full border-2 border-primary/20 border-t-primary animate-spin" />
+                  <Crosshair className="h-5 w-5 text-primary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                 </div>
-                <p className="font-mono text-xs uppercase tracking-widest text-gray-600 animate-pulse">
+                <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground animate-pulse">
                   Executing hunt query...
                 </p>
               </div>
@@ -139,13 +127,11 @@ export const HuntingWorkspace: React.FC = () => {
       {/* ═══════════════════════════════════════════════════════════════
            RIGHT: Sidebar (Stats + Patterns + Saved)
          ═══════════════════════════════════════════════════════════════ */}
-      <div className="w-full shrink-0 overflow-y-auto bg-gray-900/50 xl:w-[400px] 2xl:w-[440px]">
+      <div className="w-full shrink-0 overflow-y-auto bg-card/50 xl:w-[400px] 2xl:w-[440px]">
         <div className="space-y-5 p-4">
           <StatsPanel />
-          <div className="border-t border-gray-800/40" />
+          <div className="border-t border-border" />
           <PatternInsights />
-          <div className="border-t border-gray-800/40" />
-          <SavedQueries />
         </div>
       </div>
     </div>

@@ -1,13 +1,12 @@
 import React, { useEffect, useCallback } from 'react';
 import { getGraph, getTimeline, getAlerts, getSummary } from './api/client';
 import { useStore, InvStep, ClusterNode } from './store/useStore';
-import { Sidebar } from './components/Sidebar';
-import { GraphView } from './components/GraphView';
-import { TimelinePanel } from './components/TimelinePanel';
-import { AlertsPanel } from './components/AlertsPanel';
-import { ProcessDetailsPanel } from './components/ProcessDetailsPanel';
-import { InvestigationFlowPanel } from './components/InvestigationFlowPanel';
-import { PathReplayController } from './components/PathReplayController';
+import { Sidebar } from './components/layout/Sidebar';
+import { GraphView } from './components/graph/GraphView';
+import { TimelinePanel } from './components/forensics/TimelinePanel';
+import { AlertsPanel } from './components/forensics/AlertsPanel';
+import { ProcessDetailsPanel } from './components/forensics/ProcessDetailsPanel';
+import { InvestigationFlowPanel } from './components/forensics/InvestigationFlowPanel';
 import { HuntingWorkspace } from './components/hunting/HuntingWorkspace';
 import { Loader2, Shield } from 'lucide-react';
 
@@ -147,13 +146,13 @@ const App: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="flex h-screen items-center justify-center bg-gray-950 text-white flex-col gap-6">
+      <div className="flex h-screen items-center justify-center bg-background text-foreground flex-col gap-6">
         <div className="relative">
-           <Shield className="w-16 h-16 text-indigo-900 absolute opacity-50 blur-[20px] animate-pulse" />
-           <Shield className="w-16 h-16 text-indigo-500 relative z-10" />
+           <Shield className="w-16 h-16 text-primary absolute opacity-50 blur-[20px] animate-pulse" />
+           <Shield className="w-16 h-16 text-primary relative z-10" />
         </div>
-        <Loader2 className="w-8 h-8 text-indigo-400 animate-spin absolute z-20" />
-        <p className="text-gray-400 font-mono tracking-widest uppercase text-sm animate-pulse mt-4">Initializing Guided Workflow...</p>
+        <Loader2 className="w-8 h-8 text-primary animate-spin absolute z-20" />
+        <p className="text-muted-foreground font-mono tracking-widest uppercase text-sm animate-pulse mt-4">Initializing Guided Workflow...</p>
       </div>
     );
   }
@@ -168,20 +167,19 @@ const App: React.FC = () => {
         {/* GRAPH VIEW */}
         <div id="graph" className="flex-1 relative shadow-inner overflow-hidden">
           <GraphView />
-          <PathReplayController />
         </div>
       </div>
      );
   } else if (activePage === 'PROCESS_INTEL') {
      if (!selectedPID) {
        MainContent = (
-         <div className="flex-1 h-full flex flex-col items-center justify-center text-gray-500 bg-[#0B0F19]">
+         <div className="flex-1 h-full flex flex-col items-center justify-center text-muted-foreground bg-background">
            <div className="relative mb-8">
               <Shield className="w-24 h-24 opacity-5 blur-xl absolute" />
               <Shield className="w-24 h-24 opacity-20 relative z-10" />
            </div>
-           <p className="font-mono text-sm tracking-widest uppercase opacity-40">Intelligence Matrix Standby</p>
-           <p className="mt-2 text-xs text-gray-600">Select a process node to initialize deep forensic analysis.</p>
+           <p className="font-mono text-sm tracking-widest uppercase opacity-40 text-foreground">Intelligence Matrix Standby</p>
+           <p className="mt-2 text-xs text-muted-foreground">Select a process node to initialize deep forensic analysis.</p>
          </div>
        );
      } else {
@@ -202,7 +200,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="w-full flex h-screen bg-gray-950 font-sans text-white overflow-hidden selection:bg-indigo-500/30">
+    <div className="w-full flex h-screen bg-background font-sans text-foreground overflow-hidden selection:bg-primary/30">
       <Sidebar />
       <div className="flex-1 flex flex-col h-full relative min-w-0">
         <main className="flex-1 relative flex flex-col h-full overflow-hidden">

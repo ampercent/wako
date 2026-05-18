@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import type { Process } from "@/data/mockData";
+import type { Process } from "@/data/initialData";
 import { useProcesses } from "@/hooks/useApi";
 import StatCards from "@/components/dashboard/StatCards";
 import ProcessTable from "@/components/dashboard/ProcessTable";
